@@ -1,0 +1,19 @@
+@import "variables";
+
+.cardList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	&__card {
+		margin-bottom: 2em;
+		img {
+			float: left;
+			margin-right: 2em;
+		}
+		&::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	}
+}

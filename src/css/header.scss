@@ -1,0 +1,12 @@
+@import "variables";
+
+header {
+	background-color: $primaryColor;
+	line-height: 3em;
+	width: 50%;
+	padding-left: 2em;
+	a {
+		color: $secondaryColor;
+		text-decoration: none;
+	}
+}
