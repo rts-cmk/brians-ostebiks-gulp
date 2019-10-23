@@ -1,0 +1,70 @@
+[
+	{
+		"sku": "243234a",
+		"navn": "Feta",
+		"beskrivelse": [
+			"lorem ipsum",
+			"dolor sit amet"
+		],
+		"land": "Græsk",
+		"pris": 34.95,
+		"vægt": 250,
+		"billeder": [
+			"feta01.jpg",
+			"feta04.jpg",
+			"feta03.jpg",
+			"feta02.jpg"
+		]
+	},
+	{
+		"sku": "sdf3344",
+		"navn": "Emmenthaler",
+		"beskrivelse": [
+			"lorem ipsum",
+			"dolor sit amet"
+		],
+		"land": "Frankrig",
+		"pris": 17.25,
+		"vægt": 100,
+		"billeder": [
+			"emmenthaler01.jpg",
+			"emmenthaler04.jpg",
+			"emmenthaler03.jpg",
+			"emmenthaler02.jpg"
+		]
+	},
+	{
+		"sku": "438389dd",
+		"navn": "Brie",
+		"beskrivelse": [
+			"lorem ipsum",
+			"dolor sit amet"
+		],
+		"land": "Dansk",
+		"pris": 33.50,
+		"vægt": 250,
+		"billeder": [
+			"brie01.jpg",
+			"brie04.jpg",
+			"brie03.jpg",
+			"brie02.jpg"
+		]
+	},
+	{
+		"sku": "344ff",
+		"navn": "Gouda",
+		"beskrivelse": [
+			"lorem ipsum",
+			"dolor sit amet"
+		],
+		"land": "Holland",
+		"pris": 77.42,
+		"vægt": 250,
+		"billeder": [
+			"gouda01.jpg",
+			"gouda04.jpg",
+			"gouda03.jpg",
+			"gouda02.jpg"
+		]
+	}
+]

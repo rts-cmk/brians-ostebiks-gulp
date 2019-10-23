@@ -3,6 +3,7 @@ const ejs = require("gulp-ejs");
 const rename = require("gulp-rename");
 const connect = require("gulp-connect");
 const sass = require("gulp-sass");
+const babel = require("gulp-babel");
 
 sass.compiler = require("node-sass");
 
@@ -13,10 +14,8 @@ function html(done) {
 			if (path.basename != "index") {
 				path.dirname = path.basename;
 				path.basename = "index";
-				path.extname = ".html";
-			} else {
-				path.extname = ".html"
 			}
+			path.extname = ".html";
 		}))
 		.pipe(gulp.dest("dist"))
 		.pipe(connect.reload());
@@ -39,9 +38,36 @@ function watchScss() {
 	gulp.watch("src/css/**/*.scss", { ignoreInitial: false }, scss);
 }
 
+function javascript(done) {
+	gulp.src("./src/javascript/**/*.js")
+		.pipe(babel({
+			presets: ["@babel/env"]
+		}))
+		.pipe(gulp.dest("./dist/assets/javascript"))
+		.pipe(connect.reload());
+	done();
+}
+
+function watchJavascript() {
+	gulp.watch("./src/javascript/**/*.js", { ignoreInitial: false }, javascript);
+}
+
+function json(done) {
+	gulp.src("./src/json/*.json")
+		.pipe(gulp.dest("./dist/data"))
+		.pipe(connect.reload());
+	done();
+}
+
+function watchJson() {
+	gulp.watch("./src/json/*.json", { ignoreInitial: false }, json);
+}
+
 gulp.task("dev", function(done) {
 	watchHtml();
 	watchScss();
+	watchJavascript();
+	watchJson();
 	connect.server({
 		livereload: true,
 		root: "dist"

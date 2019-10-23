@@ -10,6 +10,8 @@
   "author": "Brian Emilius <be@rts.dk>",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "babel": "^6.23.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
