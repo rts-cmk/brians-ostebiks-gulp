@@ -19,14 +19,28 @@
 <template id="cardTemplate">
 	<li>
 		<article class="cardList__card">
-			<img src="" alt="">
+			<img width="230" height="170" src="" alt="">
 			<h1></h1>
 			<p></p>
+			<table>
+				<tr>
+					<th>Land</th>
+					<td><span class="country"></span></td>
+				</tr>
+				<tr>
+					<th>Vægt</th>
+					<td><span class="weight"></span>g</td>
+				</tr>
+				<tr>
+					<th>Pris</th>
+					<td><span class="price"></span></td>
+				</tr>
+			</table>
 			<a href="">Læs mere</a>
 		</article>
 	</li>
 </template>
 
-<script src="/assets/javascript/get-products.js"></script>
+<script src="/assets/javascript/get-products.js" type="module"></script>
 
 <% include ../partials/after-footer %>

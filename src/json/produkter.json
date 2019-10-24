@@ -6,7 +6,7 @@
 			"lorem ipsum",
 			"dolor sit amet"
 		],
-		"land": "Græsk",
+		"land": "Grækenland",
 		"pris": 34.95,
 		"vægt": 250,
 		"billeder": [
@@ -40,7 +40,7 @@
 			"lorem ipsum",
 			"dolor sit amet"
 		],
-		"land": "Dansk",
+		"land": "Danmark",
 		"pris": 33.50,
 		"vægt": 250,
 		"billeder": [
