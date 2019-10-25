@@ -1,0 +1,17 @@
+@import "variables";
+
+.gallery {
+	display: flex;
+	width: 600px;
+	flex-wrap: wrap;
+	float: left;
+	margin-right: 2em;
+	&__large {
+		width: 600px;
+		max-height: 400px;
+	}
+	&__small {
+		width: 200px;
+		height: auto;
+	}
+}

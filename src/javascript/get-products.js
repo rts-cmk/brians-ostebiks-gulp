@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			data.forEach(function(product) {
 				const clone = cardTemplate.content.cloneNode(true);
 				clone.querySelector("h1").innerText = product.navn;
-				clone.querySelector("p").innerText = product.beskrivelse[0];
+				clone.querySelectorAll("p")[0].innerText = product.beskrivelse[0];
 				clone.querySelector("img").src = `/assets/images/${product.billeder[0]}`;
 				clone.querySelector(".price").innerText = product.pris;
 				clone.querySelector(".weight").innerText = product.vægt;
