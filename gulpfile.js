@@ -4,6 +4,7 @@ const rename = require("gulp-rename");
 const connect = require("gulp-connect");
 const sass = require("gulp-sass");
 const babel = require("gulp-babel");
+const imagemin = require("gulp-imagemin");
 
 sass.compiler = require("node-sass");
 
@@ -63,11 +64,24 @@ function watchJson() {
 	gulp.watch("./src/json/*.json", { ignoreInitial: false }, json);
 }
 
+function images(done) {
+	gulp.src("./src/images/*")
+		.pipe(imagemin())
+		.pipe(gulp.dest("./dist/assets/images"))
+		.pipe(connect.reload());
+	done();
+}
+
+function watchImages() {
+	gulp.watch("./src/images/*", { ignoreInitial: false }, images);
+}
+
 gulp.task("dev", function(done) {
 	watchHtml();
 	watchScss();
 	watchJavascript();
 	watchJson();
+	watchImages();
 	connect.server({
 		livereload: true,
 		root: "dist"

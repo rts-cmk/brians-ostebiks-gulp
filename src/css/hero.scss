@@ -3,5 +3,6 @@
 .hero {
 	height: calc(100vh - 3em);
 	width: 100vw;
-	background-image: url("https://via.placeholder.com/1920x1080");
+	background-image: url("/assets/images/hero-bg.jpg");
+	background-size: cover;
 }
